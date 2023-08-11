@@ -1,5 +1,5 @@
 export const apiConfig = {
-  baseURL: "https://adm-dev.ciadeestagios.com.br",
+  baseURL: "https://adm.ciadeestagios.com.br",
   endpoints: {
     getToken: "/api/v1/auths/get-access-token",
     getVacancies: "/api/v1/vacancies/",
