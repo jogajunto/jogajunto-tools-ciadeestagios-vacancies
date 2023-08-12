@@ -63,4 +63,4 @@ Siga a estrutura atual de separar configurações, funções auxiliares e servi�
 Mantenha a documentação atualizada.
 
 ### Suporte
-Para dúvidas ou problemas, entre em contato com [Nome ou E-mail do Responsável].
+Para dúvidas ou problemas, entre em contato com [dev@jogajunto.com.br].
