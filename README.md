@@ -21,7 +21,9 @@ Estrutura do Projeto
 ### Descrição dos Diretórios:
 
 `config/`: Contém as configurações da API, incluindo URL base, endpoints e credenciais.
+
 `helpers/`: Funções auxiliares, incluindo uma função genérica para fazer requisições fetch.
+
 `services/`: Serviços relacionados à API, como obter um token e buscar vagas.
 
 ### Configuração
