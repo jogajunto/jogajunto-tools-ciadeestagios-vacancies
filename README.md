@@ -28,14 +28,13 @@ Antes de começar, configure as variáveis de ambiente necessárias. O arquivo a
 ### Como usar
 
 Obtendo Vagas:
-No seu arquivo HTML principal, importe o script main.js.
-O script fará a chamada automaticamente ao ser importado.
+Primeiramente, no seu arquivo HTML principal, importe o script main.js:
 
 ```html
 <script type="module" src="/js/vacancies/main.js"></script>
 ```
 
-Dentro do arquivo main.js, você pode modificar o nome da empresa conforme necessário:
+Após a importação, você pode fazer a chamada à função listVacancies e definir os callbacks conforme desejado:
 
 ```javascript
 // Para usar:
