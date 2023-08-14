@@ -8,10 +8,11 @@
 <body>
     <script type="module" src="/js/vacancies/main.js"></script>
 
-    <script type="text/javascript">
+    <script type="module">
+        import { listVacancies } from '/js/vacancies/main.js';
         // Para usar:
         listVacancies(
-            "NomeDaEmpresa", 
+            "volvo", 
             {
                 onInit: () => console.log('Inicializando...'),
                 onLoad: () => console.log('Carregando...'),
