@@ -18,7 +18,7 @@ export const apiConfig = {
 };
 `;
 
-const directoryPath = path.join(__dirname, 'js', 'vacancies', 'config');
+const directoryPath = path.join(__dirname, 'config');
 if (!fs.existsSync(directoryPath)) {
     fs.mkdirSync(directoryPath, { recursive: true });
 }
