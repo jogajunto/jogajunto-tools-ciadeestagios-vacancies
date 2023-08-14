@@ -20,8 +20,8 @@ export async function getVacancies(company_name, callbacks = {}) {
   callbacks.onLoad && callbacks.onLoad();
 
   try {
-    const token = await getToken(callbacks);
-    const data = fetchAPI(`${apiConfig.baseURL}${apiConfig.endpoints.getVacancies}${company_name}`, 'GET', null, token);
+    const token = await getToken();
+    const data = await fetchAPI(`${apiConfig.baseURL}${apiConfig.endpoints.getVacancies}${company_name}`, 'GET', null, token);
     callbacks.onSuccess && callbacks.onSuccess(data);
     return data;
   } catch (error) {
