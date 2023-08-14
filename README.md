@@ -6,9 +6,6 @@ Estrutura do Projeto
 
 ```lua
 /js
-|-- config/
-|   |-- apiConfig.js
-|
 |-- helpers/
 |   |-- fetchHelper.js
 |
@@ -20,15 +17,13 @@ Estrutura do Projeto
 
 ### Descrição dos Diretórios:
 
-`config/`: Contém as configurações da API, incluindo URL base, endpoints e credenciais.
-
 `helpers/`: Funções auxiliares, incluindo uma função genérica para fazer requisições fetch.
 
 `services/`: Serviços relacionados à API, como obter um token e buscar vagas.
 
 ### Configuração
 
-Antes de começar, certifique-se de que as credenciais em /js/config/apiConfig.js estejam corretas.
+Antes de começar, configure as variáveis de ambiente necessárias. O arquivo apiConfig.js será gerado dinamicamente com base nessas variáveis.
 
 ### Como usar
 
@@ -37,13 +32,22 @@ No seu arquivo HTML principal, importe o script main.js.
 O script fará a chamada automaticamente ao ser importado.
 
 ```html
-<script type="module" src="/js/main.js"></script>
+<script type="module" src="/js/vacancies/main.js"></script>
 ```
 
 Dentro do arquivo main.js, você pode modificar o nome da empresa conforme necessário:
 
 ```javascript
-listVacancies("NomeDaEmpresa"); // Substitua pelo nome da empresa.
+// Para usar:
+  listVacancies(
+      "NomeDaEmpresa", 
+      {
+          onInit: () => console.log('Inicializando...'),
+          onLoad: () => console.log('Carregando...'),
+          onSuccess: (data) => console.log('Dados carregados:', data),
+          onError: (error) => console.error('Erro:', error.message),
+      }
+  ); // Substitua pelo nome da empresa e altere os callbacks conforme desejado.
 ```
 
 ### Considerações Importantes
