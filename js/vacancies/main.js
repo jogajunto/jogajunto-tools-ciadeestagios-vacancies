@@ -1,6 +1,6 @@
 import { getVacancies } from "./services/vacanciesService.js";
 
-const callbacks = {
+const defaultCallbacks = {
   onInit: () => console.log('Inicializando...'),
   onLoad: () => console.log('Carregando...'),
   onSuccess: (data) => console.log('Dados carregados:', data),
