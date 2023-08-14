@@ -28,27 +28,25 @@ Antes de começar, configure as variáveis de ambiente necessárias. O arquivo a
 ### Como usar
 
 Obtendo Vagas:
-Primeiramente, no seu arquivo HTML principal, importe o script main.js:
+Primeiramente, no seu script onde vai usar o listVacancies, importe da seguinte maneira:
 
-```html
-<script type="module" src="/js/vacancies/main.js"></script>
+```js
+import { listVacancies } from '/js/vacancies/main.js';
 ```
 
 Após a importação, você pode fazer a chamada à função listVacancies e definir os callbacks conforme desejado:
 
-```html
-<script type="text/javascript">
-    // Para usar:
-    listVacancies(
-        "NomeDaEmpresa", 
-        {
-            onInit: () => console.log('Inicializando...'),
-            onLoad: () => console.log('Carregando...'),
-            onSuccess: (data) => console.log('Dados carregados:', data),
-            onError: (error) => console.error('Erro:', error.message),
-        }
-    ); // Substitua pelo nome da empresa e altere os callbacks conforme desejado.
-</script>
+```js
+// Para usar:
+listVacancies(
+    "NomeDaEmpresa", 
+    {
+        onInit: () => console.log('Inicializando...'),
+        onLoad: () => console.log('Carregando...'),
+        onSuccess: (data) => console.log('Dados carregados:', data),
+        onError: (error) => console.error('Erro:', error.message),
+    }
+); // Substitua pelo nome da empresa e altere os callbacks conforme desejado.
 ```
 
 ### Considerações Importantes
