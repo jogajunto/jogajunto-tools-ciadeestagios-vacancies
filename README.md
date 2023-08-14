@@ -36,17 +36,19 @@ Primeiramente, no seu arquivo HTML principal, importe o script main.js:
 
 Após a importação, você pode fazer a chamada à função listVacancies e definir os callbacks conforme desejado:
 
-```javascript
-// Para usar:
-  listVacancies(
-      "NomeDaEmpresa", 
-      {
-          onInit: () => console.log('Inicializando...'),
-          onLoad: () => console.log('Carregando...'),
-          onSuccess: (data) => console.log('Dados carregados:', data),
-          onError: (error) => console.error('Erro:', error.message),
-      }
-  ); // Substitua pelo nome da empresa e altere os callbacks conforme desejado.
+```html
+<script type="text/javascript">
+    // Para usar:
+    listVacancies(
+        "NomeDaEmpresa", 
+        {
+            onInit: () => console.log('Inicializando...'),
+            onLoad: () => console.log('Carregando...'),
+            onSuccess: (data) => console.log('Dados carregados:', data),
+            onError: (error) => console.error('Erro:', error.message),
+        }
+    ); // Substitua pelo nome da empresa e altere os callbacks conforme desejado.
+</script>
 ```
 
 ### Considerações Importantes
