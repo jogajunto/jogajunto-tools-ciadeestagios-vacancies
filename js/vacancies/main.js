@@ -7,7 +7,12 @@ const defaultCallbacks = {
   onError: (error) => console.error('Erro:', error.message),
 };
 
-async function listVacancies(company_name, callbacks = {}) {
+export async function listVacancies(company_name, customCallbacks = {}) {
+  const mergedCallbacks = {
+    ...defaultCallbacks,
+    ...customCallbacks
+  };
+
   try {
     const vacancies = await getVacancies(company_name, callbacks);
     console.log(vacancies);
