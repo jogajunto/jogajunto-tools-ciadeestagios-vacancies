@@ -43,7 +43,10 @@ listVacancies(
     {
         onInit: () => console.log('Inicializando...'),
         onLoad: () => console.log('Carregando...'),
-        onSuccess: (data) => console.log('Dados carregados:', data),
+        onSuccess: (data) => {
+            console.log('Dados carregados:', data);
+            console.log('Vagas: ', data.vacancies)
+        },
         onError: (error) => console.error('Erro:', error.message),
     }
 ); // Substitua pelo nome da empresa e altere os callbacks conforme desejado.
