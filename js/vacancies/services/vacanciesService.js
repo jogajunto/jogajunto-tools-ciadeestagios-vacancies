@@ -9,7 +9,16 @@ export async function getToken() {
   ).then(data => data.access_token);  // Ajuste conforme o campo correto da resposta da API.
 }
 
-export async function getVacancies(company_name) {
-  const token = await getToken();
-  return fetchAPI(`${apiConfig.baseURL}${apiConfig.endpoints.getVacancies}${company_name}`, 'GET', null, token);
+export async function getVacancies(company_name, callbacks = {}) {
+  callbacks.onLoad && callbacks.onLoad();
+
+  try {
+    const token = await getToken();
+    const data = fetchAPI(`${apiConfig.baseURL}${apiConfig.endpoints.getVacancies}${company_name}`, 'GET', null, token);
+    callbacks.onSuccess && callbacks.onSuccess(data);
+    return data;
+  } catch (error) {
+    callbacks.onError && callbacks.onError(error);
+    throw error;
+  } 
 }
