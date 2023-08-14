@@ -5,7 +5,6 @@
 Aqui está a estrutura de diretórios do projeto:
 
 ```lua
-luaCopy code
 jogajunto-tools-ciadeestagios-vacancies/
 │
 ├── js/
@@ -19,7 +18,6 @@ jogajunto-tools-ciadeestagios-vacancies/
 ├── .env.example
 ├── index.html
 └── package.json
-
 ```
 
 ### Detalhes dos Arquivos e Diretórios:
