@@ -84,6 +84,7 @@ listVacancies("NomeDaEmpresa", {
     onLoad: () => console.log('Carregando dados...'),
     onSuccess: (data) => {
         console.log('Dados recuperados com sucesso:', data);
+        console.log('Vagas: ', data.vacancies)
     },
     onError: (error) => {
         console.error('Erro ao buscar dados:', error.message);
