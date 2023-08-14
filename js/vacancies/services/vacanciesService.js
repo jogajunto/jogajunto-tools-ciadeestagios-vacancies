@@ -10,7 +10,7 @@ export async function getToken() {
       apiConfig.credentials
     ).then(data => data.access_token);  // Ajuste conforme o campo correto da resposta da API.
 
-    return data.access_token;  // Ajuste conforme o campo correto da resposta da API.
+    return data;  // Ajuste conforme o campo correto da resposta da API.
   } catch (error) {
     throw error;
   }
