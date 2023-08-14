@@ -4,7 +4,7 @@ import { fetchAPI } from "../helpers/fetchHelper.js";
 export async function getToken(callbacks) {
   callbacks.onInit && callbacks.onInit();
   try {
-    const data = fetchAPI(
+    const data = await fetchAPI(
       `${apiConfig.baseURL}${apiConfig.endpoints.getToken}`,
       'POST',
       apiConfig.credentials
