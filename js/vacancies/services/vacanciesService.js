@@ -2,6 +2,7 @@ import { apiConfig } from "../config/apiConfig.js";
 import { fetchAPI } from "../helpers/fetchHelper.js";
 
 export async function getToken() {
+  callbacks.onInit && callbacks.onInit();
   try {
     const data = fetchAPI(
       `${apiConfig.baseURL}${apiConfig.endpoints.getToken}`,
