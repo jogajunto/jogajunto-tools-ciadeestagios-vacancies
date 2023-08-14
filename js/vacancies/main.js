@@ -14,11 +14,13 @@ export async function listVacancies(company_name, customCallbacks = {}) {
   };
 
   try {
-    const vacancies = await getVacancies(company_name, callbacks);
+    mergedCallbacks.onInit && mergedCallbacks.onInit();
+    const vacancies = await getVacancies(company_name, mergedCallbacks);
     console.log(vacancies);
     return vacancies;
   } catch (error) {
-    console.error("Erro:", error.message);
+    mergedCallbacks.onError && mergedCallbacks.onError(error);
+    console.error("Erro:", error);
     return null;
   }
 }
