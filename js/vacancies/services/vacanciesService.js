@@ -2,11 +2,17 @@ import { apiConfig } from "../config/apiConfig.js";
 import { fetchAPI } from "../helpers/fetchHelper.js";
 
 export async function getToken() {
-  return fetchAPI(
-    `${apiConfig.baseURL}${apiConfig.endpoints.getToken}`,
-    'POST',
-    apiConfig.credentials
-  ).then(data => data.access_token);  // Ajuste conforme o campo correto da resposta da API.
+  try {
+    const data = fetchAPI(
+      `${apiConfig.baseURL}${apiConfig.endpoints.getToken}`,
+      'POST',
+      apiConfig.credentials
+    ).then(data => data.access_token);  // Ajuste conforme o campo correto da resposta da API.
+
+    return data.access_token;  // Ajuste conforme o campo correto da resposta da API.
+  } catch (error) {
+    throw error;
+  }
 }
 
 export async function getVacancies(company_name, callbacks = {}) {
