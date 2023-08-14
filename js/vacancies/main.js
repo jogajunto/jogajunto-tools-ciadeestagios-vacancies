@@ -16,11 +16,9 @@ export async function listVacancies(company_name, customCallbacks = {}) {
   try {
     mergedCallbacks.onInit && mergedCallbacks.onInit();
     const vacancies = await getVacancies(company_name, mergedCallbacks);
-    console.log(vacancies);
     return vacancies;
   } catch (error) {
     mergedCallbacks.onError && mergedCallbacks.onError(error);
-    console.error("Erro:", error);
     return null;
   }
 }
