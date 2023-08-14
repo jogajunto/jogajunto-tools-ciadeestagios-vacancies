@@ -1,7 +1,7 @@
 import { apiConfig } from "../config/apiConfig.js";
 import { fetchAPI } from "../helpers/fetchHelper.js";
 
-export async function getToken() {
+export async function getToken(callbacks) {
   callbacks.onInit && callbacks.onInit();
   try {
     const data = fetchAPI(
