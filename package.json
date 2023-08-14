@@ -1,0 +1,18 @@
+{
+  "name": "jogajunto-tools-ciadeestagios-vacancies",
+  "version": "1.0.0",
+  "description": "API Vacancies Integration",
+  "main": "main.js",
+  "scripts": {
+    "build": "node ./js/vacancies/generateConfig.js"
+  },
+  "author": {
+    "name": "Rafael de Araujo",
+    "email": "rafael.araujo@jogajuntocomunicacao.com.br",
+    "url": "https://github.com/rafaell1995"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "dotenv-webpack": "^8.0.1"
+  }
+}
