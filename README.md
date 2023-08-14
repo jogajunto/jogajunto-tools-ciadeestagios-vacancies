@@ -18,6 +18,7 @@ jogajunto-tools-ciadeestagios-vacancies/
 ├── .env.example
 ├── index.html
 └── package.json
+├── packgae-lock.json
 ```
 
 ### Detalhes dos Arquivos e Diretórios:
