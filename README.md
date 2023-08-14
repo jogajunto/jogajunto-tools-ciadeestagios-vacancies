@@ -13,7 +13,6 @@ jogajunto-tools-ciadeestagios-vacancies/
 │   │   ├── services/
 │   │   ├── generateConfig.js
 │   │   └── main.js
-│   └── .gitkeep
 │
 ├── .env.example
 ├── index.html
@@ -23,17 +22,16 @@ jogajunto-tools-ciadeestagios-vacancies/
 
 ### Detalhes dos Arquivos e Diretórios:
 
-1. **.gitkeep**: Um arquivo vazio usado para manter o diretório **`js/`** no controle de versão, já que o Git não rastreia diretórios vazios.
-2. **generateConfig.js**: Este script gera um arquivo de configuração com os detalhes da API e as credenciais. Ele lê variáveis de ambiente para obter as credenciais e cria o arquivo **`apiConfig.js`**.
-3. **fetchHelper.js**: Um helper para facilitar as chamadas de API. Ele gerencia cabeçalhos, corpo da requisição e tratamento de erros.
+1. **generateConfig.js**: Este script gera um arquivo de configuração com os detalhes da API e as credenciais. Ele lê variáveis de ambiente para obter as credenciais e cria o arquivo **`apiConfig.js`**.
+2. **fetchHelper.js**: Um helper para facilitar as chamadas de API. Ele gerencia cabeçalhos, corpo da requisição e tratamento de erros.
     - **`fetchAPI`**: Uma função para fazer solicitações API com tratamento de erros embutido. Ele aceita um **`endpoint`**, **`method`**, **`body`** e um **`token`**.
-4. **main.js**:
+3. **main.js**:
     - **`listVacancies`**: Esta função é usada para listar vagas de uma empresa específica. Ela integra os outros módulos e é o ponto de entrada principal para a integração com a API.
-5. **vacanciesService.js**:
+4. **vacanciesService.js**:
     - **`getToken`**: Esta função pega um token de acesso da API usando as credenciais fornecidas.
     - **`getVacancies`**: Com o token em mãos, essa função pega as vagas para uma empresa específica.
-6. **index.html**: Uma página simples para testar a integração. Ela importa o módulo principal e chama a função **`listVacancies`**.
-7. **package.json**: Contém metadados do projeto e scripts. O script "build" executa **`generateConfig.js`**.
+5. **index.html**: Uma página simples para testar a integração. Ela importa o módulo principal e chama a função **`listVacancies`**.
+6. **package.json**: Contém metadados do projeto e scripts. O script "build" executa **`generateConfig.js`**.
 
 ### Como Usar:
 
