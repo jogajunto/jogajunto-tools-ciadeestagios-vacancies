@@ -7,7 +7,7 @@ const callbacks = {
   onError: (error) => console.error('Erro:', error.message),
 };
 
-async function listVacancies(company_name, callbacks) {
+async function listVacancies(company_name, callbacks = {}) {
   try {
     const vacancies = await getVacancies(company_name, callbacks);
     console.log(vacancies);
