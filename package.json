@@ -4,7 +4,8 @@
   "description": "API Vacancies Integration",
   "main": "main.js",
   "scripts": {
-    "build": "node ./js/vacancies/generateConfig.js"
+    "build": "node ./js/vacancies/generateConfig.js",
+    "postinstall": "npm run build"
   },
   "author": {
     "name": "Rafael de Araujo",
