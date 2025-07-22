@@ -13,7 +13,7 @@ export const apiConfig = {
         email: "email",
         password: "password",
         abilities: "vacancies",
-        token: "${process.env.JJ_VACANCIES_FETCH_TOKEN}"
+        token: "${process.env.ACCESS_TOKEN}"
     },
 }
 `;
