@@ -28,36 +28,42 @@ export async function fetchAPI(
         errorMessage = "Requisição inválida.";
         break;
       case 401:
-        errorMessage = "Não autorizado -- Sua chave de API está errada.";
+        errorMessage = `Não autorizado - ${token} - Sua chave de API está errada.`;
         break;
       case 403:
-        errorMessage = "Proibido -- O recurso solicitado é apenas para administradores.";
+        errorMessage =
+          "Proibido -- O recurso solicitado é apenas para administradores.";
         break;
       case 404:
         errorMessage = "Recurso não encontrado.";
         break;
       case 405:
-        errorMessage = "Método não permitido -- Você tentou acessar um recurso com um método inválido.";
+        errorMessage =
+          "Método não permitido -- Você tentou acessar um recurso com um método inválido.";
         break;
       case 406:
-        errorMessage = "Não aceitável -- Você solicitou um formato que não é json.";
+        errorMessage =
+          "Não aceitável -- Você solicitou um formato que não é json.";
         break;
       case 410:
-        errorMessage = "Gone -- O recurso solicitado foi removido de nossos servidores.";
+        errorMessage =
+          "Gone -- O recurso solicitado foi removido de nossos servidores.";
         break;
       case 418:
         errorMessage = "Eu sou um bule de chá."; // Isso é uma piada com base em uma especificação de "brincadeira" do HTTP. Você pode decidir mantê-la ou não.
         break;
       case 429:
-        errorMessage = "Muitas requisições -- Você está fazendo muitas solicitações. Reduza a velocidade!";
+        errorMessage =
+          "Muitas requisições -- Você está fazendo muitas solicitações. Reduza a velocidade!";
         break;
       case 500:
         errorMessage = "Erro interno do servidor.";
         break;
       case 503:
-        errorMessage = "Serviço indisponível -- Estamos temporariamente offline para manutenção. Tente novamente mais tarde.";
+        errorMessage =
+          "Serviço indisponível -- Estamos temporariamente offline para manutenção. Tente novamente mais tarde.";
         break;
-    }    
+    }
 
     // Tente obter o corpo da resposta
     try {
@@ -67,7 +73,7 @@ export async function fetchAPI(
       if (errorData && errorData.message) {
         errorMessage += " " + errorData.message;
       } else if (errorData && errorData.company_name) {
-        errorMessage += " " + errorData.company_name.join(' ');
+        errorMessage += " " + errorData.company_name.join(" ");
       }
     } catch (e) {
       // A resposta pode não ser JSON, então use a mensagem de erro padrão
