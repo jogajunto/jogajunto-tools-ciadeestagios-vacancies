@@ -1,7 +1,7 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
-require('dotenv').config();
+require("dotenv").config();
 
 const configString = `
 export const apiConfig = {
@@ -19,10 +19,10 @@ export const apiConfig = {
 }
 `;
 
-const directoryPath = path.join(__dirname, 'config');
+const directoryPath = path.join(__dirname, "config");
 if (!fs.existsSync(directoryPath)) {
-    fs.mkdirSync(directoryPath, { recursive: true });
+  fs.mkdirSync(directoryPath, { recursive: true });
 }
 
-fs.writeFileSync(path.join(directoryPath, 'apiConfig.js'), configString);
-console.log('apiConfig.js gerado com sucesso.');
+fs.writeFileSync(path.join(directoryPath, "apiConfig.js"), configString);
+console.log("apiConfig.js gerado com sucesso.");
