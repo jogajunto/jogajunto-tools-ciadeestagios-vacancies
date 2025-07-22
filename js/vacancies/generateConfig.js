@@ -2,6 +2,8 @@ require("dotenv").config();
 const fs = require("fs");
 const path = require("path");
 
+console.log("JJ_VACANCIES_FETCH_TOKEN:", process.env.JJ_VACANCIES_FETCH_TOKEN);
+
 const configString = `
 export const apiConfig = {
     baseURL: "https://adm.ciadeestagios.com.br",
